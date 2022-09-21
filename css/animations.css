@@ -1,0 +1,86 @@
+.a1{
+    width: 100px;
+    height:100px;
+    background-color: aqua;
+    position: relative;
+    animation-name: simplecolorswap;  /* animation identifier for keyframe */
+    animation-duration: 4s;
+    animation-iteration-count: infinite;   /* for infinite loop */
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+
+.a2{
+    width: 100px;
+    height:100px;
+    background-color: aqua;
+    position: relative;
+    /*
+    animation-name: percentagecolorswap;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse; 
+    */
+/* can be done as one liner: */
+    animation: percentagecolorswap 4s infinite linear alternate-reverse;
+}
+
+.a3{
+    width: 100px;
+    height:100px;
+    background-color: aqua;
+    position: relative;
+    animation: movingcolorswap 4s infinite linear alternate-reverse;
+}
+ /* SIMPLE COLOR ANIMATION */
+@keyframes simplecolorswap{
+    from {background-color: aqua;}
+    to{background-color: pink;}
+    
+}
+
+
+/* percantage based COLOR ANIMATION */
+@keyframes percentagecolorswap{
+    0% {background-color: aqua;}
+    25% {background-color: pink;}
+    50% {background-color: pink;}
+    75% {background-color: aqua;}
+    100% {background-color: aqua;}
+    
+}
+
+/* moving animation left-right aqua-pink */
+@keyframes movingcolorswap{
+    0% {
+        background-color: aqua;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: pink;
+        left: 500px;
+        top:0;
+    }
+    50% {
+        background-color: pink;
+        left: 500px;
+        top: 500px;
+        border-radius: 50%;
+
+    }
+    75% {
+        background-color: aqua;
+        left: 0;
+        top: 500px;
+    }
+    100% {
+        background-color: aqua;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+
+    }
+    
+}
