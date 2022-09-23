@@ -29,13 +29,13 @@ console.log(petDescription);
     species:"rabbit",
 };
 
-const petName = myPet.name;
-const petColor = myPet.color;
-const petSpecies = myPet.species;
+const name = myPet.name;
+const color = myPet.color;
+const species = myPet.species;
 
-const petDescription = `His name is ${petName},
-                        the fur is ${petColor} 
-                        and he is a ${petSpecies}`;
+const petDescription = `His name is ${name},
+                        the fur is ${color} 
+                        and he is a ${species}`;
 
 console.log(petDescription);
 
@@ -49,11 +49,11 @@ console.log(petDescription);
     species:"rabbit",
 };
 
-const {petname, petcolor, petspecies} = myPet;
+const {name, color, species} = myPet;
 
-const petDescription = `His name is ${petname},
-                        the fur is ${petcolor} 
-                        and he is a ${petspecies}`;
+const petDescription = `His name is ${name},
+                        the fur is ${color} 
+                        and he is a ${species}`;
 
 console.log(petDescription);
 
@@ -67,9 +67,9 @@ console.log(petDescription);
     species:"rabbit",
 };
 
- const petName = myPet.name;
- const petColor = myPet.color;
- const petSpecies = myPet.species;
+ const name = myPet.name;
+ const color = myPet.color;
+ const species = myPet.species;
 
  /**
   * normal variable assignemnt
@@ -77,6 +77,10 @@ console.log(petDescription);
   * destructuring
   */
 
- const {petname, petcolor, petspecies} = myPet;
+ const {name, color, species} = myPet;
 
+/**
+ * BONUS::RENAMING VARIABLES
+ */
 
+const {name : petName, color: petColor, species: petSpecies} = myPet;
