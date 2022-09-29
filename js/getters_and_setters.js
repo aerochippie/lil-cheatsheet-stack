@@ -68,6 +68,7 @@ console.log(square1.area);
  */
     set area (area){
         this.width = Math.sqrt(area);
+        this.height = this.width;
     }
 
 
