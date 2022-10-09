@@ -1,8 +1,22 @@
-function makeFunction(x){
-    return function (y){
-            return x + y;
-    }
-}
+const triangles = [
+   {
+       length: 10,
+       height: 20,
+       width: 30
+   },
+   {
+       length: 20,
+       height: 10,
+       width: 10
+   },
+   {
+       length: 30,
+       height: 20,
+       width: 20
+   }
+ ];
+  const areas = triangles.map((triangle) =>
+   triangle.length * triangle.height * triangle.width
+  );
 
-const add5 = makeFunction(5);
-console.log(add5(2));
+  console.log(areas);

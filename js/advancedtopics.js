@@ -82,4 +82,56 @@ function makeFunction(x){
 }
 
 const add5 = makeFunction(5);
-console.log(add5(2));
+console.log(add5(2));  //  (add5()) is a closure
+
+const add10 = makeFunction(10);
+console.log(add10(20)); // (add10())  is a closure
+
+/**
+ * they have the same function logic, but also their own lexical environments that have
+ * different values
+ */
+
+/**
+ * PASS BY VALUE / PASS BY REFERENCE
+ * ----Objects and arrays are passed by a reference,
+ * which means that modifying them as arguments in a function
+ * can modify the original variable being passed. This is different to primitive variables which are passed by value
+ * and fo not alter the original variable.
+ * 
+ * good video on this topic:
+ * https://www.youtube.com/watch?v=-hBJz2PPIVE&ab_channel=WebDevSimplified
+ */
+
+/**
+ * PASS BY VALUE
+ * Primitive types are passed by value in functions. When a primitive type is being passed as an argument to a function
+ * is being passed as that value. The original variable outside the function will not be changed at all if the
+ * parameter gets modified inside of the function.
+ * 
+ * ----All function arguments are always passed as value.
+ */
+
+
+/**
+ * PASS BY REFERENCE
+ */
+ const person  = {
+    name: "dom",
+    age: 30,
+    occupation: "developer"
+ }
+
+ function passBy (a){
+    a.name = "lilla";
+    console.log(a)
+ }
+
+ passBy(person); // if ran without this lin, name will stay dom, otherwise is changed to lilla.
+ console.log(person);
+
+
+ /**
+  * PASS BY VALUE
+  */
+
